@@ -1,0 +1,89 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Define fonts and styles -->
+    <style>
+      .text-manga { font-family: 'Courier New', Courier, monospace; fill: black; }
+      .title-manga { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: bold; font-size: 20px; fill: white; }
+      .data-manga { font-size: 16px; font-weight: bold; }
+      .arc-manga { font-size: 14px; font-style: italic; font-weight: normal; }
+      
+      /* Simple pulsing animation for the glow effect */
+      @keyframes pulse-glow {
+        0%, 100% { fill-opacity: 1; }
+        50% { fill-opacity: 0.5; }
+      }
+    </style>
+    
+    <!-- Define a stylized, heavy black manga border path -->
+    <path id="border-path" d="M10,10 L590,10 L590,290 L10,290 Z M15,15 L15,285 L585,285 L585,15 Z" fill="black"/>
+  </defs>
+
+  <!-- BACKGROUND: Minimal halftone background effect using repeating dots -->
+  <rect x="15" y="15" width="570" height="270" fill="white" stroke="black" stroke-width="0.5"/>
+  <circle cx="30" cy="30" r="1.5" fill="#f0f0f0"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" /></circle>
+  <circle cx="60" cy="30" r="1.5" fill="#f0f0f0"><animate attributeName="opacity" values="1;0.2;1" dur="2s" delay="0.5s" repeatCount="indefinite" /></circle>
+  <circle cx="30" cy="60" r="1.5" fill="#f0f0f0"><animate attributeName="opacity" values="1;0.2;1" dur="2s" delay="1s" repeatCount="indefinite" /></circle>
+  <circle cx="60" cy="60" r="1.5" fill="#f0f0f0"><animate attributeName="opacity" values="1;0.2;1" dur="2s" delay="1.5s" repeatCount="indefinite" /></circle>
+  <!-- (This could be expanded to cover the whole background, but I’m keeping it minimal for simplicity) -->
+
+  <!-- MANGA PANEL DIVISIONS AND BORDERS -->
+  <rect x="15" y="15" width="295" height="270" fill="white" stroke="black" stroke-width="4"/>
+  <rect x="310" y="15" width="275" height="270" fill="white" stroke="black" stroke-width="4"/>
+  <path d="M15,15 L585,15 L585,285 L15,285 Z" fill="none" stroke="black" stroke-width="6"/> <!-- Heavy inner border -->
+  <line x1="310" y1="15" x2="310" y2="285" stroke="black" stroke-width="4"/> <!-- Main division line -->
+
+  <!-- LEFT PANEL: PRATEEK SHARMA: THE PROTAGONIST -->
+  <rect x="25" y="25" width="275" height="30" fill="black" stroke="black" stroke-width="2"/>
+  <text x="162.5" y="47" text-anchor="middle" class="text-manga title-manga">PRATEEK SHARMA: PROTAGONIST</text>
+
+  <!-- Status data -->
+  <text x="35" y="75" class="text-manga data-manga">CLASS: 3rd-Year CSE Student</text>
+  <text x="35" y="100" class="text-manga data-manga">ARC:</text>
+  <text x="50" y="120" class="text-manga arc-manga">Mastering the dark arts of backend development,</text>
+  <text x="50" y="135" class="text-manga arc-manga">low-latency AI, and automation.</text>
+
+  <text x="35" y="165" class="text-manga data-manga">MANTRA:</text>
+  <text x="35" y="195" class="text-manga data-manga" style="font-size: 24px;">"KING OF PYTHON."</text>
+  
+  <!-- ANIMATION 1: Subtle, glowing halftone effect on "KING OF PYTHON" -->
+  <ellipse cx="140" cy="188" rx="80" ry="15" fill="#999" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.5s" repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="140" cy="188" rx="70" ry="12" fill="white" opacity="1"/>
+  <text x="140" y="195" text-anchor="middle" class="text-manga" style="font-size: 22px; font-weight:bold;">"KING OF PYTHON."</text>
+
+  <!-- RIGHT PANEL: ARSENAL & JUTSU (TECH STACK) -->
+  <rect x="320" y="25" width="255" height="30" fill="black" stroke="black" stroke-width="2"/>
+  <text x="447.5" y="47" text-anchor="middle" class="text-manga title-manga">ARSENAL &amp; JUTSU</text>
+
+  <!-- Python Icon (Simple stylized representation) -->
+  <path d="M 330 80 C 330 75, 335 70, 340 70 L 360 70 C 365 70, 370 75, 370 80 L 370 100 C 370 105, 365 110, 360 110 L 350 110 C 345 110, 340 105, 340 100 L 340 90 L 330 90 Z" fill="#999" opacity="0.4" stroke="black" stroke-width="1.5">
+    <animate attributeName="fill-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+  </path>
+  <text x="380" y="95" class="text-manga data-manga">Python</text>
+  
+  <!-- MongoDB Icon (Simple representation) -->
+  <path d="M 330 130 C 330 120, 340 115, 350 115 C 360 115, 370 120, 370 130 L 370 150 C 370 160, 360 165, 350 165 C 340 165, 330 160, 330 150 Z" fill="#999" opacity="0.4" stroke="black" stroke-width="1.5">
+    <animate attributeName="fill-opacity" values="0.4;1;0.4" dur="2s" delay="0.5s" repeatCount="indefinite" />
+  </path>
+  <text x="380" y="145" class="text-manga data-manga">MongoDB</text>
+  
+  <!-- Llama 3 Icon (Stylized, abstract "LLM" flow) -->
+  <path d="M 330 180 Q 350 165, 370 180 L 370 200 Q 350 215, 330 200 Z" fill="#999" opacity="0.4" stroke="black" stroke-width="1.5">
+    <animate attributeName="fill-opacity" values="0.4;1;0.4" dur="2s" delay="1s" repeatCount="indefinite" />
+  </path>
+  <text x="380" y="195" class="text-manga data-manga">Llama 3 (LLM)</text>
+
+  <!-- ANIMATION 2: Looping "Speed Lines" or halftone shifting effect -->
+  <rect x="0" y="285" width="600" height="15" fill="black"/>
+  <rect x="0" y="285" width="20" height="15" fill="white">
+     <animate attributeName="x" values="-20;600" dur="1s" repeatCount="indefinite" />
+  </rect>
+  <rect x="100" y="285" width="20" height="15" fill="white">
+     <animate attributeName="x" values="-120;500" dur="1.2s" repeatCount="indefinite" />
+  </rect>
+  <rect x="250" y="285" width="20" height="15" fill="white">
+     <animate attributeName="x" values="-270;350" dur="0.9s" repeatCount="indefinite" />
+  </rect>
+  
+</svg>
