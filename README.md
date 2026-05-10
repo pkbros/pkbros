@@ -1,1 +1,1 @@
-![My Dynamic SVG](https://my-github-profile-1043914551337.us-central1.run.app/)
+![My Dynamic SVG](gittume_optimized.svg)
